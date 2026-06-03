@@ -1,0 +1,110 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', sans-serif;
+}
+
+body{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  background:
+    radial-gradient(circle at top left,#1a2958,#04061f 45%),
+    radial-gradient(circle at bottom right,#1b0f47,#020312);
+
+  overflow:hidden;
+}
+
+#calculator{
+  width:340px;
+
+  background:rgba(18,18,40,0.8);
+
+  backdrop-filter:blur(20px);
+
+  border:1px solid rgba(255,255,255,.08);
+
+  border-radius:28px;
+
+  overflow:hidden;
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,.5),
+    0 0 60px rgba(120,90,255,.15);
+}
+
+.display{
+  height:140px;
+
+  display:flex;
+  align-items:flex-end;
+  justify-content:flex-end;
+
+  padding:25px;
+
+  font-size:4rem;
+  color:white;
+
+  background:transparent;
+}
+
+.buttons{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+}
+
+.btn{
+  border:none;
+  outline:none;
+
+  height:78px;
+
+  cursor:pointer;
+
+  font-size:1.8rem;
+
+  color:white;
+
+  background:#2f3050;
+
+  transition:.2s;
+}
+
+.btn:hover{
+  filter:brightness(1.15);
+}
+
+.btn:active{
+  transform:scale(.95);
+}
+
+.operator{
+  background:linear-gradient(
+    180deg,
+    #8b5cf6,
+    #6d4ce6
+  );
+}
+
+.action{
+  background:#41425f;
+}
+
+.zero{
+  grid-column:span 2;
+}
+
+@media(max-width:480px){
+
+  #calculator{
+    width:95%;
+  }
+
+  .display{
+    font-size:3rem;
+  }
+
+}
